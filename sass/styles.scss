@@ -1,0 +1,67 @@
+.logo {
+  width: 100px;
+}
+
+.btn-primary {
+  background: #00c9aa;
+  border: 0px;
+  color: white;
+}
+
+.gradient-button {
+  background: linear-gradient(
+    45deg, #00c9aa, #62f6c9) !important;
+}
+
+.portfolio-item {
+  text-decoration: none;
+  .caption {
+    background: linear-gradient(45deg, #222222, #202020) !important;
+    opacity: 0.8;
+    position: relative;
+
+    @media(min-width: 768px) {
+      position: absolute;
+      opacity: .9;
+      height: 5rem;
+      bottom: 0;
+      top: auto;
+    }
+
+    .caption-content {
+      color: #fff;
+      margin: 1rem;
+    }
+  }
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(#00c9aa, #62f6c9);
+  background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.features-device-mockup .circle .gradient-start-color {
+  stop-color: #00c9aa;
+}
+.features-device-mockup .circle .gradient-end-color {
+  stop-color: #62f6c9;
+}
+
+.features-device-mockup {
+  .shape-1,
+  .shape-2 {
+    fill: #00c9aa;
+  }
+}
+
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(
+    45deg, #222222, #202020) !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: #000000;
+  font-weight: bold;
+}
