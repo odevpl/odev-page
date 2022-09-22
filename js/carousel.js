@@ -1,7 +1,7 @@
 const owl = $(".owl-carousel.gallery-with-projects");
 owl.owlCarousel({
   loop: true,
-  autoplay: true,
+  // autoplay: true,
   items: 3,
   margin: 10,
   animateOut: 'fadeOut'
