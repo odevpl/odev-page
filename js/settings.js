@@ -12,5 +12,9 @@ export const domElement = {
       handlebars: document.querySelector('#template-gallery-description-points').innerHTML,
       insertionPlace: document.querySelector('#gallery-description-points'),
     },
+    // miniGallery: {
+    //   handlebars: document.querySelector('#template-gallery-carousel-mini').innerHTML,
+    //   insertionPlace: document.querySelector('#gallery-carousel-mini'),
+    // }
   }
 };

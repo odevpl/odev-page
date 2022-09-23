@@ -17,8 +17,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/bt-styles.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Swiper JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -257,12 +257,14 @@
                                 {{ content }}
                             </script>
                         </div>
+
                         <div class="row gx-0" style="border: 3px solid blue">
                             <h1 id="gallery-description" class="display-1 lh-1 mb-3"></h1>
                             <script id="template-gallery-description" type="text/x-handlebars-template">
                                 {{ content }}
                             </script>
                         </div>
+
                         <div class="row gx-0" style="border: 3px solid blue">
                             <ul id="gallery-description-points" class="display-1 lh-1 mb-3">
                                 <script id="template-gallery-description-points" type="text/x-handlebars-template">
@@ -274,9 +276,35 @@
                                 </script>
                             </ul>
                         </div>
+
                         <div class="row gx-0" style="border: 3px solid blue">
-                            <h1 class="display-1 lh-1 mb-3">Minigaleria</h1>
+                            <h4 class="display-1 lh-1 mb-3">Mini galeria</h4>
+
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <!-- <div class="swiper-slide">Slide 1</div>
+                                    <div class="swiper-slide">Slide 2</div>
+                                    <div class="swiper-slide">Slide 3</div> -->
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                            
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+
+                            <button class="add-slide">Add new slide</button>
+                            <button class="remove-slide">remove slide</button>
+
                         </div>
+
                     </div>
 
                     <div class="col-12 text-center mb-5" style="border: 3px solid green">
@@ -287,49 +315,6 @@
 
                 </div>
             </div>
-        </section>
-        <!-- Owl Carousel-->
-        <section id="projects-carousel">
-            <div class="section gray-bg text-muted footer-top clearfix">
-                <div class="container">
-                  <div class="row">
-
-                    <div class="col-md-12">
-                      <div class="owl-carousel gallery-with-projects">
-              
-                        <div class="client">
-                          <img src="assets/img/portfolio-1.jpg" alt="" />
-                          <div class="positioner">
-                            <div class="icon"><i class="fa fa-trash"></i></div>
-                          </div>
-                        </div>
-              
-                        <div class="client">
-                          <img src="assets/img/portfolio-2.jpg" alt="" />
-                          <div class="positioner">
-                            <div class="icon"><i class="fa fa-trash"></i></div>
-                          </div>
-                        </div>
-              
-                        <div class="client">
-                          <img src="assets/img/portfolio-3.jpg" alt="" />
-                          <div class="positioner">
-                            <div class="icon"><i class="fa fa-trash"></i></div>
-                          </div>
-                        </div>
-              
-                        <div class="client">
-                          <img src="assets/img/portfolio-4.jpg" alt="" />
-                          <div class="positioner">
-                            <div class="icon"><i class="fa fa-trash"></i></div>
-                          </div>
-                        </div>
-              
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
         </section>
         <!-- Call to action section-->
         <section class="cta" id="stop-waiting">
@@ -442,10 +427,7 @@
         <script src="js/handlebars.js" type="module"></script>
         <script src="js/gallery.js" type="module"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- Owl Carousel core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="js/carousel.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     </body>
 </html>

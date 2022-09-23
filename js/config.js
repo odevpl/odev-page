@@ -15,16 +15,19 @@ export const projects = [
     },
     miniGallery: [
       {
+        id: 1,
         title: 'first image',
         src: 'assets/img/portfolio-1.jpg',
         alt: 'first image'
       },
       {
+        id: 2,
         title: 'second image',
         src: 'assets/img/portfolio-2.jpg',
         alt: 'second image'
       },
       {
+        id: 3,
         title: 'third image',
         src: 'assets/img/portfolio-3.jpg',
         alt: 'third image'
@@ -47,16 +50,19 @@ export const projects = [
     },
     miniGallery: [
       {
+        id: 1,
         title: 'first image',
         src: 'assets/img/portfolio-2.jpg',
         alt: 'first image'
       },
       {
+        id: 2,
         title: 'second image',
         src: 'assets/img/portfolio-3.jpg',
         alt: 'second image'
       },
       {
+        id: 3,
         title: 'third image',
         src: 'assets/img/portfolio-4.jpg',
         alt: 'third image'

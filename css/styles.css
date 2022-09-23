@@ -66,24 +66,9 @@
   font-weight: bold;
 }
 
-.owl-carousel .positioner {
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.owl-carousel .icon {
-  position: absolute;
-  right: -15px;
-  bottom: -20px;
-  width: 22px;
-  height: 22px;
-  border-radius: 20px;
-  border: 1px solid white;
-  background: #fff;
-  text-align: center;
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */
