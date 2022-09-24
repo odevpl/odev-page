@@ -247,6 +247,10 @@
                     <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid green">
                         <div class="row gx-0" style="border: 3px solid blue">
                             <h1 class="display-1 lh-1 mb-3">Moduł z ekranem</h1>
+                            <div id="gallery-main-img"></div>
+                            <script id="template-gallery-main-img" type="text/x-handlebars-template">
+                                <img src="{{ content }}"/>
+                            </script>
                         </div>
                     </div>
 
@@ -278,30 +282,21 @@
                         </div>
 
                         <div class="row gx-0" style="border: 3px solid blue">
-                            <h4 class="display-1 lh-1 mb-3">Mini galeria</h4>
 
-                            <!-- Slider main container -->
-                            <div class="swiper">
+                            <!-- Slider Mini main container -->
+                            <div class="swiper swiper-mini">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
-                                    <!-- <div class="swiper-slide">Slide 1</div>
-                                    <div class="swiper-slide">Slide 2</div>
-                                    <div class="swiper-slide">Slide 3</div> -->
                                 </div>
                                 <!-- If we need pagination -->
-                                <div class="swiper-pagination"></div>
-                            
+                                <div class="swiper-pagination"></div>                           
                                 <!-- If we need navigation buttons -->
                                 <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            
+                                <div class="swiper-button-next"></div>                           
                                 <!-- If we need scrollbar -->
                                 <div class="swiper-scrollbar"></div>
                             </div>
-
-                            <button class="add-slide">Add new slide</button>
-                            <button class="remove-slide">remove slide</button>
 
                         </div>
 
@@ -309,7 +304,22 @@
 
                     <div class="col-12 text-center mb-5" style="border: 3px solid green">
                         <div class="row gx-0" style="border: 3px solid blue">
-                            <h1 class="display-1 lh-1 mb-3">Galeria</h1>
+
+                            <!-- Slider Mini main container -->
+                            <div class="swiper swiper-main">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>                           
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>                           
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+
                         </div>
                     </div>
 

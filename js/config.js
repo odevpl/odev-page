@@ -8,7 +8,7 @@ export const projects = [
       {id: 2, text: 'point B1'},
       {id: 3, text: 'point C1'},
     ],
-    mainImage: {
+    mainImg: {
       title: 'main image 1',
       src: 'assets/img/portfolio-1.jpg',
       alt: 'main image 1'
@@ -43,7 +43,7 @@ export const projects = [
       {id: 2, text: 'point B2'},
       {id: 3, text: 'point C2'},
     ],
-    mainImage: {
+    mainImg: {
       title: 'main image 2',
       src: 'assets/img/portfolio-2.jpg',
       alt: 'main image 2'

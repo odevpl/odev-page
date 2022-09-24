@@ -1,5 +1,9 @@
 export const domElement = {
   gallery: {
+    mainImg: {
+      handlebars: document.querySelector('#template-gallery-main-img').innerHTML,
+      insertionPlace: document.querySelector('#gallery-main-img'),
+    },
     title: {
       handlebars: document.querySelector('#template-gallery-title').innerHTML,
       insertionPlace: document.querySelector('#gallery-title'),
@@ -12,9 +16,11 @@ export const domElement = {
       handlebars: document.querySelector('#template-gallery-description-points').innerHTML,
       insertionPlace: document.querySelector('#gallery-description-points'),
     },
-    // miniGallery: {
-    //   handlebars: document.querySelector('#template-gallery-carousel-mini').innerHTML,
-    //   insertionPlace: document.querySelector('#gallery-carousel-mini'),
-    // }
+    miniSwiper: {
+      wrapper: document.querySelector('.swiper-mini .swiper-wrapper'),
+    },
+    mainSwiper: {
+      wrapper: document.querySelector('.swiper-main .swiper-wrapper'),
+    },
   }
 };
