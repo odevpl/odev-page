@@ -5,48 +5,25 @@ import { addTextToTemp, addListElemToTemp } from './handlebars.js';
 
 export const swiperMini = new Swiper('.swiper.swiper-mini', {
   // Optional parameters
-  // direction: 'vertical',
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
-
-  // If we need pagination
-  pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-  },
-
   // Navigation arrows
   navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-      el: '.swiper-scrollbar',
   },
 });
 
 export const swiperMain = new Swiper('.swiper.swiper-main', {
   // Optional parameters
-  // direction: 'vertical',
+  slidesPerView: 3,
+  spaceBetween: 30,
   loop: true,
-
-  // If we need pagination
-  pagination: {
-      el: '.swiper-pagination',
-  },
-
   // Navigation arrows
   navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-      el: '.swiper-scrollbar',
   },
 });
 
@@ -86,7 +63,7 @@ class Gallery {
     thisGallery.dom.mainSwiperWrapper = element.mainSwiper.wrapper;
   }
 
-  render({ title, description, descriptionPoints, miniGallery }) {
+  render({ id, title, description, descriptionPoints, miniGallery }) {
     const thisGallery = this;
     // main IMG
     const tempMainImgDomElem = thisGallery.dom.mainImgHandlebars;
@@ -106,42 +83,41 @@ class Gallery {
     const targetDescritpionPoints = thisGallery.dom.descriptionPointsInsertionPlace;
     // swiper mini
     miniGallery.forEach((elem) => {
-      console.log(elem);
       thisGallery.swiperMini.appendSlide(`<div class="swiper-slide"><img data-id="${elem.id}" class="miniSliderImg img-${elem.id}" src="${elem.src}"/></div>`);
     });
     // swiper mini addEventListener
     const miniSliderImages = document.querySelectorAll(".swiper-mini .swiper-slide .miniSliderImg");
     miniSliderImages.forEach((img) => {
       img.addEventListener('click', () => {
-        const id = img.getAttribute('data-id');
-        console.log(id);
-        thisGallery.mainImgUpdate(id);
+        const imgId = img.getAttribute('data-id');
+        thisGallery.mainImgUpdate(id, imgId);
       });
     });
     // swiper main
     thisGallery.projects.forEach((proj) => {
-      thisGallery.swiperMain.appendSlide(`<div class="swiper-slide"><img id="mainImg-${proj.id}" src="${proj.mainImg.src}"/></div>`);
-    })
+      thisGallery.swiperMain.appendSlide(`<div class="swiper-slide"><img data-id="${proj.id}" class="mainSliderImg img-${proj.id}" src="${proj.mainImg.src}"/></div>`);
+    });
+    // swiper main addEventListener
+    const mainSliderImages = document.querySelectorAll(".swiper-main .swiper-slide .mainSliderImg");
+    mainSliderImages.forEach((img) => {
+      img.addEventListener('click', () => {
+        const projectId = img.getAttribute('data-id');
+        thisGallery.update(projectId);
+      });
+    });
 
     addTextToTemp(tempMainImgDomElem, mainImgSrc, targetMainImgDomElem);
     addTextToTemp(tempTitleDomElem, titleText, targetTitleDomElem);
     addTextToTemp(tempDescriptionDomElem, descriptionText, targetDescriptionDomElem);
   
     addListElemToTemp(tempDescritpionPoints, descriptionPointsData, targetDescritpionPoints);
-
-    thisGallery.checkData();
   }
 
-  checkData() {
+  mainImgUpdate(projId, imgId) {
     const thisGallery = this;
 
-    console.log(thisGallery);
-  }
-  mainImgUpdate(id) {
-    const thisGallery = this;
-    // main IMG
     const tempMainImgDomElem = thisGallery.dom.mainImgHandlebars;
-    const mainImgSrc = {content: thisGallery.content.miniGallery[id-1].src};
+    const mainImgSrc = {content: thisGallery.projects[projId-1].miniGallery[imgId-1].src};
     const targetMainImgDomElem = thisGallery.dom.mainImgInsertionPlace;
 
     targetMainImgDomElem.innerHTML = "";
@@ -149,12 +125,12 @@ class Gallery {
     addTextToTemp(tempMainImgDomElem, mainImgSrc, targetMainImgDomElem);
   }
 
-  update(newContent) {
-    // TODO
+  update(projectId) {
     const thisGallery = this;
 
+    thisGallery.dom.descriptionPointsInsertionPlace.innerHTML = "";
     thisGallery.dom.miniSwiperWrapper.innerHTML = "";
-    thisGallery.render(newContent);
+    thisGallery.render(thisGallery.projects[projectId-1]);
   }
 
   init() {
@@ -166,8 +142,3 @@ class Gallery {
 }
 
 const projectsGallery = new Gallery(domElement.gallery, projects, projects[0], swiperMini, swiperMain);
-
-// to test changing data -> TODO -> changing data by click on specific image
-// setTimeout(() => projectsGallery.update(projects[1]), 3000); // beside of render it should be update -> it should clear html inside list and after that put in new data
-
-
