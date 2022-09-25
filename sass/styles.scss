@@ -72,7 +72,6 @@
   height: 100%;
   
   .swiper-wrapper {
-    padding: 20px;
 
     .swiper-slide {
       text-align: center;
@@ -95,10 +94,43 @@
 
       img {
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        object-fit: fill;
       }
+    }
+  }
+
+  .swiper-mini {
+    padding: 0 30px !important;
+  }
+
+  .mini-slider-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .main-slider-img {
+    width: 270px;
+    height: 230px;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    &::after {
+      font-size: 12px;
+    }
+  }
+}
+
+#portfolio-temp {
+  .main-img-wrapper {
+    .main-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

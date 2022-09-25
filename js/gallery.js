@@ -6,8 +6,10 @@ import { addTextToTemp, addListElemToTemp } from './handlebars.js';
 export const swiperMini = new Swiper('.swiper.swiper-mini', {
   // Optional parameters
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
+  // slidesPerGroup: 3,
   loop: true,
+  // loopFillGroupWithBlank: false,
   // Navigation arrows
   navigation: {
       nextEl: '.swiper-button-next',
@@ -83,10 +85,10 @@ class Gallery {
     const targetDescritpionPoints = thisGallery.dom.descriptionPointsInsertionPlace;
     // swiper mini
     miniGallery.forEach((elem) => {
-      thisGallery.swiperMini.appendSlide(`<div class="swiper-slide"><img data-id="${elem.id}" class="miniSliderImg img-${elem.id}" src="${elem.src}"/></div>`);
+      thisGallery.swiperMini.appendSlide(`<div class="swiper-slide"><img data-id="${elem.id}" class="mini-slider-img img-${elem.id}" src="${elem.src}"/></div>`);
     });
     // swiper mini addEventListener
-    const miniSliderImages = document.querySelectorAll(".swiper-mini .swiper-slide .miniSliderImg");
+    const miniSliderImages = document.querySelectorAll(".swiper-mini .swiper-slide .mini-slider-img");
     miniSliderImages.forEach((img) => {
       img.addEventListener('click', () => {
         const imgId = img.getAttribute('data-id');
@@ -95,10 +97,10 @@ class Gallery {
     });
     // swiper main
     thisGallery.projects.forEach((proj) => {
-      thisGallery.swiperMain.appendSlide(`<div class="swiper-slide"><img data-id="${proj.id}" class="mainSliderImg img-${proj.id}" src="${proj.mainImg.src}"/></div>`);
+      thisGallery.swiperMain.appendSlide(`<div class="swiper-slide"><img data-id="${proj.id}" class="main-slider-img img-${proj.id}" src="${proj.mainImg.src}"/></div>`);
     });
     // swiper main addEventListener
-    const mainSliderImages = document.querySelectorAll(".swiper-main .swiper-slide .mainSliderImg");
+    const mainSliderImages = document.querySelectorAll(".swiper-main .swiper-slide .main-slider-img");
     mainSliderImages.forEach((img) => {
       img.addEventListener('click', () => {
         const projectId = img.getAttribute('data-id');

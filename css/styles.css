@@ -71,10 +71,6 @@
   height: 100%;
 }
 
-.swiper .swiper-wrapper {
-  padding: 20px;
-}
-
 .swiper .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -95,6 +91,36 @@
 }
 
 .swiper .swiper-wrapper .swiper-slide img {
+  display: block;
+  object-fit: fill;
+}
+
+.swiper .swiper-mini {
+  padding: 0 30px !important;
+}
+
+.swiper .mini-slider-img {
+  width: 130px;
+  height: 130px;
+}
+
+.swiper .main-slider-img {
+  width: 270px;
+  height: 230px;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+}
+
+.swiper .swiper-button-prev::after, .swiper .swiper-button-next::after {
+  font-size: 12px;
+}
+
+#portfolio-temp .main-img-wrapper .main-img {
   display: block;
   width: 100%;
   height: 100%;

@@ -246,9 +246,9 @@
 
                     <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid green">
                         <div class="row gx-0" style="border: 3px solid blue">
-                            <div id="gallery-main-img"></div>
+                            <div id="gallery-main-img" class="main-img-wrapper"></div>
                             <script id="template-gallery-main-img" type="text/x-handlebars-template">
-                                <img src="{{ content }}"/>
+                                <img class="main-img" src="{{ content }}"/>
                             </script>
                         </div>
                     </div>
@@ -281,35 +281,34 @@
                         </div>
 
                         <div class="row gx-0" style="border: 3px solid blue">
-
                             <!-- Slider MINI container -->
                             <div class="swiper swiper-mini">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
                                 </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>                           
+                                <div class="swiper-button-prev btn-primary"></div>
+                                <div class="swiper-button-next btn-primary"></div>                           
                             </div>
-
                         </div>
 
                     </div>
 
                     <div class="col-12 text-center mb-5" style="border: 3px solid green">
-                        <div class="row gx-0" style="border: 3px solid blue">
 
+                        <div class="row gx-0" style="border: 3px solid blue">
+                            <h1 class="display-1 lh-1 mb-3 swiper-main-title">Zobacz inne projekty</h1>
                             <!-- Slider MAIN container -->
                             <div class="swiper swiper-main">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
                                 </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>                           
+                                <div class="swiper-button-prev btn-primary"></div>
+                                <div class="swiper-button-next btn-primary"></div>                           
                             </div>
-
                         </div>
+
                     </div>
 
                 </div>
