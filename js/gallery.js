@@ -54,6 +54,9 @@ class Gallery {
     thisGallery.dom.titleHandlebars = element.title.handlebars;
     thisGallery.dom.titleInsertionPlace = element.title.insertionPlace;
 
+    thisGallery.dom.linkHandlebars = element.link.handlebars;
+    thisGallery.dom.linkInsertionPlace = element.link.insertionPlace;
+
     thisGallery.dom.descriptionHandlebars = element.description.handlebars;
     thisGallery.dom.descriptionInsertionPlace = element.description.insertionPlace;
 
@@ -65,7 +68,7 @@ class Gallery {
     thisGallery.dom.mainSwiperWrapper = element.mainSwiper.wrapper;
   }
 
-  render({ id, title, description, descriptionPoints, miniGallery }) {
+  render({ id, title, link, description, descriptionPoints, miniGallery }) {
     const thisGallery = this;
     // main IMG
     const tempMainImgDomElem = thisGallery.dom.mainImgHandlebars;
@@ -75,6 +78,10 @@ class Gallery {
     const tempTitleDomElem = thisGallery.dom.titleHandlebars;
     const titleText = {content: title};
     const targetTitleDomElem = thisGallery.dom.titleInsertionPlace;
+    // link
+    const tempLinkDomElem = thisGallery.dom.linkHandlebars;
+    const linkHref = {content: link};
+    const targetLinkDomElem = thisGallery.dom.linkInsertionPlace;
     // description
     const tempDescriptionDomElem = thisGallery.dom.descriptionHandlebars;
     const descriptionText = {content: description};
@@ -110,6 +117,7 @@ class Gallery {
 
     addTextToTemp(tempMainImgDomElem, mainImgSrc, targetMainImgDomElem);
     addTextToTemp(tempTitleDomElem, titleText, targetTitleDomElem);
+    addTextToTemp(tempLinkDomElem, linkHref, targetLinkDomElem);
     addTextToTemp(tempDescriptionDomElem, descriptionText, targetDescriptionDomElem);
   
     addListElemToTemp(tempDescritpionPoints, descriptionPointsData, targetDescritpionPoints);

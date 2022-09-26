@@ -125,12 +125,67 @@
 }
 
 #portfolio-temp {
-  .main-img-wrapper {
-    .main-img {
-      display: block;
+
+  .monitor-wrapper {
+    position: relative;
+
+    .monitor {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
+
+    .main-img-wrapper {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+      height: 60%;
+
+      .main-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+
+    }
+
   }
+
+  .gallery-header {
+    display: flex;
+    align-items: baseline;
+
+    #gallery-title, #gallery-link {
+      display: inline;
+    }
+  
+  }
+
+  #gallery-description {
+    text-align: start;
+  }
+
+  #gallery-description-points {
+    padding: 20px 0;
+    padding-left: 30px;
+
+    li::marker {
+      color: #00c9aa;
+      font-size: 25px;
+    }
+
+    li {
+      text-align: start;
+
+      p {
+        text-align: start;
+        font-size: 15px;
+      }
+    }  
+
+  }
+
 }

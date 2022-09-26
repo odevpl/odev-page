@@ -241,46 +241,55 @@
         </section>
         <!-- Portfolio-temp-->
         <section class="content-section" id="portfolio-temp">
-            <div class="container px-4 px-lg-5" style="border: 3px solid red">
-                <div class="row gx-0" style="border: 3px solid blue">
+            <div class="container px-4 px-lg-5" style="border: 3px solid none">
+                <div class="row gx-0" style="border: 3px solid none">
 
-                    <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid green">
-                        <div class="row gx-0" style="border: 3px solid blue">
-                            <div id="gallery-main-img" class="main-img-wrapper"></div>
-                            <script id="template-gallery-main-img" type="text/x-handlebars-template">
-                                <img class="main-img" src="{{ content }}"/>
-                            </script>
+                    <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid none">
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <div class="monitor-wrapper">
+                                <img class="monitor" src="assets/img/computer.jpg"/>
+                                <div id="gallery-main-img" class="main-img-wrapper"></div>
+                                <script id="template-gallery-main-img" type="text/x-handlebars-template">
+                                    <img class="main-img" src="{{ content }}"/>
+                                </script>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid green">
-                        <div class="row gx-0" style="border: 3px solid blue">
-                            <h1 id="gallery-title" class="display-1 lh-1 mb-3"></h1>
-                            <script id="template-gallery-title" type="text/x-handlebars-template">
-                                {{ content }}
-                            </script>
+                    <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid none">
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <div class="gallery-header">
+                                <h2 id="gallery-title" class="display-4 lh-1 mb-3"></h2>
+                                <script id="template-gallery-title" type="text/x-handlebars-template">
+                                    <b>{{ content }}</b>
+                                </script>
+                                <div id="gallery-link" class="display-1 lh-1 mb-3"></div>
+                                <script id="template-gallery-link" type="text/x-handlebars-template">
+                                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 gradient-button" href="{{ content }}" target="_blank">Zobacz stronę na żywo</a>
+                                </script>
+                            </div>
                         </div>
 
-                        <div class="row gx-0" style="border: 3px solid blue">
+                        <div class="row gx-0" style="border: 3px solid none">
                             <p id="gallery-description" class="gallery-description"></p>
                             <script id="template-gallery-description" type="text/x-handlebars-template">
                                 {{ content }}
                             </script>
                         </div>
 
-                        <div class="row gx-0" style="border: 3px solid blue">
+                        <div class="row gx-0" style="border: 3px solid none">
                             <ul id="gallery-description-points" class="display-1 lh-1 mb-3">
                                 <script id="template-gallery-description-points" type="text/x-handlebars-template">
                                     {{#each elements}}
-                                        <li id="{{ @key }}" class='user'>
-                                            <h4 data-id={{id}}>{{text}}</h4>
+                                        <li id="{{ @key }}" class="user">
+                                            <p data-id={{id}}>{{text}}</p>
                                         </li>
                                     {{/each}}
                                 </script>
                             </ul>
                         </div>
 
-                        <div class="row gx-0" style="border: 3px solid blue">
+                        <div class="row gx-0" style="border: 3px solid none">
                             <!-- Slider MINI container -->
                             <div class="swiper swiper-mini">
                                 <!-- Additional required wrapper -->
@@ -294,10 +303,10 @@
 
                     </div>
 
-                    <div class="col-12 text-center mb-5" style="border: 3px solid green">
+                    <div class="col-12 text-center mb-5" style="border: 3px solid none">
 
-                        <div class="row gx-0" style="border: 3px solid blue">
-                            <h1 class="display-1 lh-1 mb-3 swiper-main-title">Zobacz inne projekty</h1>
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <h3 class="display-4 lh-1 mb-3 swiper-main-title">Zobacz inne projekty</h3>
                             <!-- Slider MAIN container -->
                             <div class="swiper swiper-main">
                                 <!-- Additional required wrapper -->

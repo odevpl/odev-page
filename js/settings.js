@@ -8,6 +8,10 @@ export const domElement = {
       handlebars: document.querySelector('#template-gallery-title').innerHTML,
       insertionPlace: document.querySelector('#gallery-title'),
     },
+    link: {
+      handlebars: document.querySelector('#template-gallery-link').innerHTML,
+      insertionPlace: document.querySelector('#gallery-link'),
+    },
     description: {
       handlebars: document.querySelector('#template-gallery-description').innerHTML,
       insertionPlace: document.querySelector('#gallery-description'),
