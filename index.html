@@ -187,64 +187,17 @@
         </aside>
         <!-- Portfolio-->
         <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
+            <div class="container px-4 px-lg-5" style="border: 3px solid none">
+
                 <div class="row gx-0">
                     <div class="col-12 text-center mb-5">
                         <h1 class="display-1 lh-1 mb-3">Nasze realizacje</h1>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona internetowa</div>
-                                    <p class="mb-0">CentrumOZE.pl - odnawialne źródła energii</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona internetowa</div>
-                                    <p class="mb-0">RedTag.com.pl - let's create something together</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona internetowa</div>
-                                    <p class="mb-0">Verdi Nieruchomości</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona Internetowa</div>
-                                    <p class="mb-0">ltmbox.pl</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- Portfolio-temp-->
-        <section class="content-section" id="portfolio-temp">
-            <div class="container px-4 px-lg-5" style="border: 3px solid none">
+
                 <div class="row gx-0" style="border: 3px solid none">
 
-                    <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid none">
+                    <div class="col-lg-7 col-12 text-center mb-5" style="border: 3px solid none">
                         <div class="row gx-0" style="border: 3px solid none">
                             <div class="monitor-wrapper">
                                 <img class="monitor" src="assets/img/computer.jpg"/>
@@ -256,16 +209,18 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-12 text-center mb-5" style="border: 3px solid none">
+                    <div class="col-lg-5 col-12 text-center mb-5" style="border: 3px solid none">
                         <div class="row gx-0" style="border: 3px solid none">
                             <div class="gallery-header">
-                                <h2 id="gallery-title" class="display-4 lh-1 mb-3"></h2>
+                                <h2 id="gallery-title" class="lh-1 mb-3"></h2>
                                 <script id="template-gallery-title" type="text/x-handlebars-template">
-                                    <b>{{ content }}</b>
+                                    {{ content }}
                                 </script>
                                 <div id="gallery-link" class="display-1 lh-1 mb-3"></div>
                                 <script id="template-gallery-link" type="text/x-handlebars-template">
-                                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 gradient-button" href="{{ content }}" target="_blank">Zobacz stronę na żywo</a>
+                                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 gradient-button" href="{{ content }}" target="_blank">
+                                        <h6>Zobacz stronę na żywo</h6>
+                                    </a>
                                 </script>
                             </div>
                         </div>
@@ -293,11 +248,21 @@
                             <!-- Slider MINI container -->
                             <div class="swiper swiper-mini">
                                 <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- Slides -->
-                                </div>
+                                <div class="container">
+                                    <div class="swiper_wrap">
+                                        <div class="swiper-container">
+
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                            </div>
+                                            
+                                        </div>
+                                    </div>                        
+                                </div>    
+
                                 <div class="swiper-button-prev btn-primary"></div>
-                                <div class="swiper-button-next btn-primary"></div>                           
+                                <div class="swiper-button-next btn-primary"></div> 
+                                
                             </div>
                         </div>
 
@@ -310,9 +275,16 @@
                             <!-- Slider MAIN container -->
                             <div class="swiper swiper-main">
                                 <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- Slides -->
-                                </div>
+                                <div class="container">
+                                    <div class="swiper_wrap">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+
                                 <div class="swiper-button-prev btn-primary"></div>
                                 <div class="swiper-button-next btn-primary"></div>                           
                             </div>

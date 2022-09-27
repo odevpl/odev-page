@@ -3,12 +3,26 @@ import { domElement } from './settings.js';
 import { addTextToTemp, addListElemToTemp } from './handlebars.js';
 
 
-export const swiperMini = new Swiper('.swiper.swiper-mini', {
+export const swiperMini = new Swiper('.swiper.swiper-mini .swiper-container', {
   // Optional parameters
-  slidesPerView: 3,
-  spaceBetween: 20,
+  slidesPerView: 2,
   // slidesPerGroup: 3,
+  spaceBetween: 20,
   loop: true,
+  breakpoints: {  
+    576: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+  },
   // loopFillGroupWithBlank: false,
   // Navigation arrows
   navigation: {
@@ -17,11 +31,26 @@ export const swiperMini = new Swiper('.swiper.swiper-mini', {
   },
 });
 
-export const swiperMain = new Swiper('.swiper.swiper-main', {
+export const swiperMain = new Swiper('.swiper.swiper-main .swiper-container', {
   // Optional parameters
-  slidesPerView: 3,
+  slidesPerView: 1,
+  // slidesPerGroup: 3,
   spaceBetween: 30,
   loop: true,
+  breakpoints: {  
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
   // Navigation arrows
   navigation: {
       nextEl: '.swiper-button-next',
@@ -92,7 +121,7 @@ class Gallery {
     const targetDescritpionPoints = thisGallery.dom.descriptionPointsInsertionPlace;
     // swiper mini
     miniGallery.forEach((elem) => {
-      thisGallery.swiperMini.appendSlide(`<div class="swiper-slide"><img data-id="${elem.id}" class="mini-slider-img img-${elem.id}" src="${elem.src}"/></div>`);
+      thisGallery.swiperMini.appendSlide(`<div class="swiper-slide swiper-slide-mini"><img data-id="${elem.id}" class="mini-slider-img img-${elem.id}" src="${elem.src}"/></div>`);
     });
     // swiper mini addEventListener
     const miniSliderImages = document.querySelectorAll(".swiper-mini .swiper-slide .mini-slider-img");
@@ -104,7 +133,7 @@ class Gallery {
     });
     // swiper main
     thisGallery.projects.forEach((proj) => {
-      thisGallery.swiperMain.appendSlide(`<div class="swiper-slide"><img data-id="${proj.id}" class="main-slider-img img-${proj.id}" src="${proj.mainImg.src}"/></div>`);
+      thisGallery.swiperMain.appendSlide(`<div class="swiper-slide swiper-slide-main"><img data-id="${proj.id}" class="main-slider-img img-${proj.id}" src="${proj.mainImg.src}"/></div>`);
     });
     // swiper main addEventListener
     const mainSliderImages = document.querySelectorAll(".swiper-main .swiper-slide .main-slider-img");
