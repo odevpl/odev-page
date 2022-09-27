@@ -1,3 +1,7 @@
+#page-top {
+  position: relative;
+}
+
 .logo {
   width: 100px;
 }
@@ -173,6 +177,7 @@
 }
 
 #portfolio {
+  position: relative;
 
   .monitor-wrapper {
     position: relative;
@@ -186,16 +191,25 @@
     .main-img-wrapper {
       position: absolute;
       top: 46px;
-      left: 50%;
+      left: calc(50% - 6px);
       transform: translateX(-50%);
       width: 85%;
       height: 60%;
 
-      .main-img {
-        display: block;
-        width: 100%;
+      .full-screen-button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: calc(100% + 10px);
         height: 100%;
-        object-fit: fill;
+
+        .main-img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+      
       }
 
     }
@@ -408,4 +422,40 @@
   
   }
   
+}
+
+
+.full-screen-img-container {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: aliceblue;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+
+  .full-screen-img-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .full-screen-img {
+      display: block;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  
+  }
+
+  .full-screen-button-x {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+}
+
+.show {
+  display: block;
 }

@@ -4,6 +4,10 @@ export const domElement = {
       handlebars: document.querySelector('#template-gallery-main-img').innerHTML,
       insertionPlace: document.querySelector('#gallery-main-img'),
     },
+    fullScreenImg: {
+      handlebars: document.querySelector('#template-gallery-full-screen-img').innerHTML,
+      insertionPlace: document.querySelector('#gallery-full-screen-img'),
+    },
     title: {
       handlebars: document.querySelector('#template-gallery-title').innerHTML,
       insertionPlace: document.querySelector('#gallery-title'),

@@ -80,6 +80,9 @@ class Gallery {
     thisGallery.dom.mainImgHandlebars = element.mainImg.handlebars;
     thisGallery.dom.mainImgInsertionPlace = element.mainImg.insertionPlace;
 
+    thisGallery.dom.fullScreenImgHandlebars = element.fullScreenImg.handlebars;
+    thisGallery.dom.fullScreenImgInsertionPlace = element.fullScreenImg.insertionPlace;
+
     thisGallery.dom.titleHandlebars = element.title.handlebars;
     thisGallery.dom.titleInsertionPlace = element.title.insertionPlace;
 
@@ -150,6 +153,8 @@ class Gallery {
     addTextToTemp(tempDescriptionDomElem, descriptionText, targetDescriptionDomElem);
   
     addListElemToTemp(tempDescritpionPoints, descriptionPointsData, targetDescritpionPoints);
+
+    thisGallery.fullScreenButtonListener();
   }
 
   mainImgUpdate(projId, imgId) {
@@ -162,6 +167,30 @@ class Gallery {
     targetMainImgDomElem.innerHTML = "";
 
     addTextToTemp(tempMainImgDomElem, mainImgSrc, targetMainImgDomElem);
+
+    thisGallery.fullScreenButtonListener();
+  }
+
+  fullScreenButtonListener() {
+    const thisGallery = this;
+
+    const temFullScreenImgDomElem = thisGallery.dom.fullScreenImgHandlebars;
+    let fullScreenImgSrc = {};
+    const targetFullScreenImgDomElem = thisGallery.dom.fullScreenImgInsertionPlace;
+
+    const fullScreenButton = document.querySelector('.full-screen-button');
+    const fullScreenWrapper = document.querySelector('.full-screen-img-container');
+
+    fullScreenButton.addEventListener('click', (event) => {
+      fullScreenImgSrc = {content: event.target.getAttribute('src')};
+      addTextToTemp(temFullScreenImgDomElem, fullScreenImgSrc, targetFullScreenImgDomElem);
+      fullScreenWrapper.classList.add('show');
+    });
+
+    const fullScreenButtonX = document.querySelector('.full-screen-button-x');
+    fullScreenButtonX.addEventListener('click', () => {
+      fullScreenWrapper.classList.remove('show');
+    });
   }
 
   update(projectId) {
