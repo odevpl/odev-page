@@ -3,7 +3,7 @@ import { domElement } from './settings.js';
 import { addTextToTemp, addListElemToTemp } from './handlebars.js';
 
 
-export const swiperMini = new Swiper('.swiper.swiper-mini .swiper-container', {
+export const swiperMini = new Swiper(' .swiper-container-mini .swiper.swiper-mini', {
   // Optional parameters
   slidesPerView: 2,
   // slidesPerGroup: 3,
@@ -26,12 +26,12 @@ export const swiperMini = new Swiper('.swiper.swiper-mini .swiper-container', {
   // loopFillGroupWithBlank: false,
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-container-mini .swiper-button-next',
+      prevEl: '.swiper-container-mini .swiper-button-prev',
   },
 });
 
-export const swiperMain = new Swiper('.swiper.swiper-main .swiper-container', {
+export const swiperMain = new Swiper('.swiper-container-main .swiper.swiper-main', {
   // Optional parameters
   slidesPerView: 1,
   // slidesPerGroup: 3,
@@ -53,8 +53,8 @@ export const swiperMain = new Swiper('.swiper.swiper-main .swiper-container', {
   },
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-container-main .swiper-button-next',
+      prevEl: '.swiper-container-main .swiper-button-prev',
   },
 });
 
