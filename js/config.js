@@ -82,5 +82,89 @@ export const projects = [
         alt: 'fourth image'
       },
     ]
+  },
+  {
+    id: 3,
+    title: 'Odev.com',
+    link: 'www.r.pl',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et congue leo. In sit amet tincidunt libero. Fusce sit amet lacus eros. Aliquam fringilla vel eros quis dapibus. Curabitur a ullamcorper ex, a ultricies elit. Cras semper mi vel odio cursus gravida. Vestibulum nec odio eros. Donec interdum porttitor ultrices. Pellentesque lacinia pellentesque diam nec posuere. Praesent in facilisis magna, id congue nibh. Proin aliquam orci odio, nec suscipit augue dictum fermentum. Cras at lacus eros.',
+    descriptionPoints: [
+      {id: 1, text: 'Praesent et congue dapibus a ligula'},
+      {id: 2, text: 'Praesent et congue amet lacus eros'},
+      {id: 3, text: 'Praesent et congue porttitor ultrices'},
+    ],
+    mainImg: {
+      title: 'main image 3',
+      src: 'assets/img/portfolio-3.jpg',
+      alt: 'main image 3'
+    },
+    miniGallery: [
+      {
+        id: 1,
+        title: 'first image',
+        src: 'assets/img/portfolio-1.jpg',
+        alt: 'first image'
+      },
+      {
+        id: 2,
+        title: 'second image',
+        src: 'assets/img/portfolio-4.jpg',
+        alt: 'second image'
+      },
+      {
+        id: 3,
+        title: 'third image',
+        src: 'assets/img/portfolio-1.jpg',
+        alt: 'third image'
+      },
+      {
+        id: 4,
+        title: 'fourth image',
+        src: 'assets/img/portfolio-4.jpg',
+        alt: 'fourth image'
+      },
+    ]
+  },
+  {
+    id: 4,
+    title: 'Odev.pl',
+    link: 'www.az.pl',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et congue leo. In sit amet tincidunt libero. Fusce sit amet lacus eros. Aliquam fringilla vel eros quis dapibus. Curabitur a ullamcorper ex, a ultricies elit. Cras semper mi vel odio cursus gravida. Vestibulum nec odio eros. Donec interdum porttitor ultrices. Pellentesque lacinia pellentesque diam nec posuere. Praesent in facilisis magna, id congue nibh. Proin aliquam orci odio, nec suscipit augue dictum fermentum. Cras at lacus eros.',
+    descriptionPoints: [
+      {id: 1, text: 'Praesent et congue dapibus a ligula'},
+      {id: 2, text: 'Praesent et congue amet lacus eros'},
+      {id: 3, text: 'Praesent et congue porttitor ultrices'},
+    ],
+    mainImg: {
+      title: 'main image 4',
+      src: 'assets/img/portfolio-4.jpg',
+      alt: 'main image 4'
+    },
+    miniGallery: [
+      {
+        id: 1,
+        title: 'first image',
+        src: 'assets/img/portfolio-3.jpg',
+        alt: 'first image'
+      },
+      {
+        id: 2,
+        title: 'second image',
+        src: 'assets/img/portfolio-4.jpg',
+        alt: 'second image'
+      },
+      {
+        id: 3,
+        title: 'third image',
+        src: 'assets/img/portfolio-3.jpg',
+        alt: 'third image'
+      },
+      {
+        id: 4,
+        title: 'fourth image',
+        src: 'assets/img/portfolio-4.jpg',
+        alt: 'fourth image'
+      },
+    ]
   }
 ]

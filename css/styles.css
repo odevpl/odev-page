@@ -105,6 +105,10 @@
   height: 210px;
 }
 
+.swiper-container .swiper .mini-slider-img:hover, .swiper-container .swiper .main-slider-img:hover {
+  cursor: pointer;
+}
+
 .swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
   position: absolute;
   width: 30px;
@@ -319,7 +323,7 @@
 .full-screen-img-container .full-screen-button-x {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
 }
 
 .show {

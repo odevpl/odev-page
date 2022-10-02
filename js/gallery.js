@@ -129,7 +129,8 @@ class Gallery {
     // swiper mini addEventListener
     const miniSliderImages = document.querySelectorAll(".swiper-mini .swiper-slide .mini-slider-img");
     miniSliderImages.forEach((img) => {
-      img.addEventListener('click', () => {
+      img.addEventListener('click', (event) => {
+        event.preventDefault();
         const imgId = img.getAttribute('data-id');
         thisGallery.mainImgUpdate(id, imgId);
       });
@@ -141,7 +142,8 @@ class Gallery {
     // swiper main addEventListener
     const mainSliderImages = document.querySelectorAll(".swiper-main .swiper-slide .main-slider-img");
     mainSliderImages.forEach((img) => {
-      img.addEventListener('click', () => {
+      img.addEventListener('click', (event) => {
+        event.preventDefault();
         const projectId = img.getAttribute('data-id');
         thisGallery.update(projectId);
       });

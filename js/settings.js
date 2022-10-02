@@ -25,7 +25,7 @@ export const domElement = {
       insertionPlace: document.querySelector('#gallery-description-points'),
     },
     miniSwiper: {
-      wrapper: document.querySelector('swiper-container-mini .swiper-mini .swiper-wrapper'),
+      wrapper: document.querySelector('.swiper-container-mini .swiper-mini .swiper-wrapper'),
     },
     mainSwiper: {
       wrapper: document.querySelector('.swiper-container-main .swiper-main .swiper-wrapper'),
