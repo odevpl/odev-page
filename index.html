@@ -17,8 +17,18 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/bt-styles.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Swiper JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     </head>
     <body id="page-top">
+        <!-- Full screen IMG -->
+        <section class="full-screen-img-container">
+            <div id="gallery-full-screen-img" class="full-screen-img-wrapper"></div>
+            <script id="template-gallery-full-screen-img" type="text/x-handlebars-template">
+                <img class="full-screen-img" src="{{ content }}"/>
+            </script>
+            <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 gradient-button full-screen-button-x">x</button>
+        </section>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
@@ -50,7 +60,7 @@
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
                             <h1 class="display-1 lh-1 mb-3">Czy chcesz być widzianym w internecie?</h1>
                             <p class="lead fw-normal text-muted mb-5">
-                                Zaoszczęć swój czas i współpracuj ze specjalistami!<br><br>
+                                Zaoszczędź swój czas i współpracuj ze specjalistami!<br><br>
                                 
                                 Zostaw to mnie i mojemu zespołowi, a teraz odpocznij. Przygotujemy dla Ciebie stronę internetową, sklep, logo, wizytówki, Facebooka i wiele innych!
                             </p> 
@@ -119,7 +129,7 @@
                                     <div class="text-center">
                                         <i class="bi-google icon-feature text-gradient d-block mb-3"></i>
                                         <h3 class="font-alt">Reklama i Social media</h3>
-                                        <p class="text-muted mb-0">Kampanie reklamowe Google i Facebook. Prowadzenie profili Social Medai.</p>
+                                        <p class="text-muted mb-0">Kampanie reklamowe Google i Facebook. Prowadzenie profili Social Media.</p>
                                     </div>
                                 </div>
                             </div>
@@ -185,55 +195,102 @@
         </aside>
         <!-- Portfolio-->
         <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
+            <div class="container px-4 px-lg-5" style="border: 3px solid none">
+
                 <div class="row gx-0">
                     <div class="col-12 text-center mb-5">
                         <h1 class="display-1 lh-1 mb-3">Nasze realizacje</h1>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona internetowa</div>
-                                    <p class="mb-0">CentrumOZE.pl - odnawialne źródła energii</p>
-                                </div>
+                </div>
+
+                <div class="row gx-0" style="border: 3px solid none">
+
+                    <div class="col-lg-7 col-12 text-center mb-5" style="border: 3px solid none">
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <div class="monitor-wrapper">
+                                <img class="monitor" src="assets/img/computer.jpg"/>
+                                <div id="gallery-main-img" class="main-img-wrapper"></div>
+                                <script id="template-gallery-main-img" type="text/x-handlebars-template">
+                                    <button data="{{ content }}" class="full-screen-button"><img class="main-img" src="{{ content }}"/></button>
+                                </script>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona internetowa</div>
-                                    <p class="mb-0">RedTag.com.pl - let's create something together</p>
-                                </div>
+
+                    <div class="col-lg-5 col-12 text-center mb-5" style="border: 3px solid none">
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <div class="gallery-header">
+                                <h2 id="gallery-title" class="lh-1 mb-3"></h2>
+                                <script id="template-gallery-title" type="text/x-handlebars-template">
+                                    {{ content }}
+                                </script>
+                                <div id="gallery-link" class="display-1 lh-1 mb-3"></div>
+                                <script id="template-gallery-link" type="text/x-handlebars-template">
+                                    <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0 gradient-button" href="{{ content }}" target="_blank">
+                                        <h6>Zobacz stronę na żywo</h6>
+                                    </a>
+                                </script>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona internetowa</div>
-                                    <p class="mb-0">Verdi Nieruchomości</p>
+                        </div>
+
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <p id="gallery-description" class="gallery-description"></p>
+                            <script id="template-gallery-description" type="text/x-handlebars-template">
+                                {{ content }}
+                            </script>
+                        </div>
+
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <ul id="gallery-description-points" class="display-1 lh-1 mb-3">
+                                <script id="template-gallery-description-points" type="text/x-handlebars-template">
+                                    {{#each elements}}
+                                        <li id="{{ @key }}" class="user">
+                                            <p data-id={{id}}>{{text}}</p>
+                                        </li>
+                                    {{/each}}
+                                </script>
+                            </ul>
+                        </div>
+
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <!-- Slider MINI container -->
+                            <div class="swiper-container swiper-container-mini">
+
+                                <div class="swiper swiper-mini">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+
+                                <div class="swiper-button-prev btn-primary"></div>
+                                <div class="swiper-button-next btn-primary"></div> 
+                                
+                            </div>                 
+                        </div>
+
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strona Internetowa</div>
-                                    <p class="mb-0">ltmbox.pl</p>
+
+                    <div class="col-12 text-center mb-5" style="border: 3px solid none">
+
+                        <div class="row gx-0" style="border: 3px solid none">
+                            <h3 class="display-4 lh-1 mb-3 swiper-main-title">Zobacz inne projekty</h3>
+                            <!-- Slider MAIN container -->
+                            <div class="swiper-container swiper-container-main">
+
+                                <div class="swiper swiper-main">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                    </div>
                                 </div>
+
+                                <div class="swiper-button-prev btn-primary"></div>
+                                <div class="swiper-button-next btn-primary"></div>  
+
                             </div>
-                        </a>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
@@ -339,10 +396,16 @@
                 </div>
             </div>
         </div>
+        <!-- Handlebars -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js" type="module"></script>
+        <script src="js/handlebars.js" type="module"></script>
+        <script src="js/gallery.js" type="module"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     </body>
 </html>
